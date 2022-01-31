@@ -9,6 +9,9 @@ public class GameManager : MonoBehaviour
     public Text timerText;
     public bool timerOn;
 
+    public int score = 0;
+    public Text scoreText;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,5 +37,11 @@ public class GameManager : MonoBehaviour
         {
             timerOn = false;
         }
+    }
+
+    public void ScorePoint(int point)
+    {
+        score += point;
+        scoreText.text = "Score: " + score;
     }
 }
