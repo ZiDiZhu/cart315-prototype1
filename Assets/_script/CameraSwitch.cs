@@ -6,6 +6,10 @@ public class CameraSwitch : MonoBehaviour
     public Camera cam2;
     public Camera cam3;
 
+    private void Start()
+    {
+        Cam1();
+    }
     public void Cam1()
     {
         cam1.enabled = true;

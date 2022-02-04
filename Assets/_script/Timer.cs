@@ -12,24 +12,27 @@ public class Timer : MonoBehaviour
     public string[] filmScript2;
     public Text caption;
     public Text caption2;
+
+    public Button btn1;
     // Start is called before the first frame update
     void Start()
     {
         StartCounting();
     }
 
+
     public void StartCounting()
     {
         for (int i = 0; i < eventToTrigger.Length; i++)
         {
             StartCoroutine(ExampleCoroutine(i));
+            Cursor.lockState=CursorLockMode.None;
         }
     }
 
     IEnumerator ExampleCoroutine(int i)
     {
         yield return new WaitForSeconds(secondsToWait[i]);
-
 
         eventToTrigger[i].Invoke();
 
