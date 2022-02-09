@@ -1,10 +1,14 @@
 using UnityEngine;
 
+//camera and lights too
 public class CameraSwitch : MonoBehaviour
 {
     public Camera cam1;
     public Camera cam2;
     public Camera cam3;
+
+    public GameObject light1;
+    public GameObject light2;
 
     private void Start()
     {
@@ -44,6 +48,22 @@ public class CameraSwitch : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.Alpha3))
         {
             Cam3();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            if (light1.activeSelf == true)
+                light1.SetActive(false);
+            else
+                light1.SetActive(true);
+        }
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            if (light2.activeSelf == true)
+                light2.SetActive(false);
+            else
+                light2.SetActive(true);
         }
     }
 }
