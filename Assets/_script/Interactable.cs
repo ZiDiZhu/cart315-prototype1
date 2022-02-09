@@ -4,15 +4,18 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
+
 //general sript for interaction when player is within range
 public class Interactable : MonoBehaviour
 {
     public string objectName;
     public Text objectNameText;
-
+    public AudioClip sfx;
     public GameObject inRangeObject; //sets active when in range
 
     public GameManager gm;
+
+
 
 
     private void OnTriggerEnter(Collider other)

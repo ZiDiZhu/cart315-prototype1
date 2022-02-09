@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour
     public int score = 0;
     public Text scoreText;
 
+    public AudioSource audioSource;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -43,5 +45,11 @@ public class GameManager : MonoBehaviour
     {
         score += point;
         scoreText.text = "Score: " + score;
+    }
+
+    public void PlaySfx(AudioClip clip)
+    {
+        audioSource.clip = clip;
+        audioSource.Play();
     }
 }

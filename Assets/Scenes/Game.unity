@@ -140,7 +140,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &45234153
 RectTransform:
   m_ObjectHideFlags: 0
@@ -374,7 +374,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &486497346
 RectTransform:
   m_ObjectHideFlags: 0
@@ -496,6 +496,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectName: printer
   objectNameText: {fileID: 1182645268}
+  sfx: {fileID: 0}
   inRangeObject: {fileID: 1154501468}
   gm: {fileID: 1949590051}
 --- !u!1 &596550981
@@ -867,7 +868,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 36.5, y: 0, z: 0}
 --- !u!1 &971559267
 GameObject:
@@ -920,7 +921,7 @@ Camera:
     m_Bits: 4294967295
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 2
+  m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 1
   m_AllowMSAA: 1
@@ -941,7 +942,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 24.368, y: -10.005, z: 4.464}
 --- !u!1 &1130323269
 GameObject:
@@ -1113,6 +1114,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1949590051}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: PlaySfx
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: e7aff0c0fe0c8ba46ac32e7bc16b4e35, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2903,6 +2916,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectName: Computer
   objectNameText: {fileID: 1182645268}
+  sfx: {fileID: 0}
   inRangeObject: {fileID: 1520442488}
   gm: {fileID: 1949590051}
 --- !u!1 &1409846350
@@ -3040,24 +3054,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02c395e18b730dd4b89e3b6aff3e6cd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  secondsToWait: 0100000003000000070000000c000000140000001c0000002400000028000000
+  secondsToWait: 01000000070000000e000000150000001c000000230000002a0000002f000000
   eventToTrigger:
   - m_PersistentCalls:
       m_Calls: []
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 149352991}
-        m_TargetAssemblyTypeName: CameraSwitch, Assembly-CSharp
-        m_MethodName: Cam1
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   - m_PersistentCalls:
       m_Calls: []
   - m_PersistentCalls:
@@ -3077,29 +3079,41 @@ MonoBehaviour:
   - m_PersistentCalls:
       m_Calls: []
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 149352991}
+        m_TargetAssemblyTypeName: CameraSwitch, Assembly-CSharp
+        m_MethodName: Cam3
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   - m_PersistentCalls:
       m_Calls: []
   - m_PersistentCalls:
       m_Calls: []
   filmScript:
-  - ACTION!
-  - '*WASD to move, 1,2,3 to change camera*'
-  - your name is joe
-  - '*Joe walks in front of the computer*'
-  - change to top down camera
+  - demo of a game about improv cinema
+  - There's the "actor " role
+  - WASD to move
+  - '*Scene lights up*'
+  - 'Joe: walk in the office, complaining about his job'
   - 'Joe: starts doing computer work'
-  - 'Camera: change to close up'
-  - 'Joe: Start complaining'
+  - 'Joe: walk towards the printer'
+  - 'Joe: print out documents'
   filmScript2:
-  - Welcom to the terribly unfinished prototype
-  - if you are live playtesting you should read blue text
-  - 'this game is about acting in a movie, '
-  - '*just keep narration*'
-  - '*joe''s inner thoughts*'
-  - '*joe''s inner thoughts*'
-  - '*joe remembered he needs to print sth*'
-  - '*joe''s inner thoughts*'
+  - ideally this would be a multiplayer game
+  - and there's the "director/cameraman" role
+  - 1,2,3 to switch camera
+  - This is a scripted event
+  - you can modify the scripted events in the "movieScript" object
+  - The actor will follow the prompts "blue text"and act with their voice
+  - Director is in charge of switching the cameras
+  - go to "movieScript" object in the inspector to write your own dialogues
   caption: {fileID: 45234154}
   caption2: {fileID: 486497347}
   btn1: {fileID: 0}
@@ -3115,7 +3129,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1480514037
 PrefabInstance:
@@ -3300,6 +3314,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1949590051}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: PlaySfx
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 813078b301d4ac648a0ac8b0275926f3, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -3510,6 +3536,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1949590052}
   - component: {fileID: 1949590051}
+  - component: {fileID: 1949590053}
   m_Layer: 0
   m_Name: GM
   m_TagString: Untagged
@@ -3534,6 +3561,7 @@ MonoBehaviour:
   timerOn: 1
   score: 0
   scoreText: {fileID: 228015999}
+  audioSource: {fileID: 1949590053}
 --- !u!4 &1949590052
 Transform:
   m_ObjectHideFlags: 0
@@ -3548,6 +3576,102 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1949590053
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949590050}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!850595691 &1964908513
 LightingSettings:
   m_ObjectHideFlags: 0
@@ -3660,7 +3784,7 @@ Camera:
     m_Bits: 4294967295
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 1
+  m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 1
   m_AllowMSAA: 1
@@ -3681,7 +3805,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 24.368, y: -79.286, z: 4.464}
 --- !u!1001 &2012298414
 PrefabInstance:
@@ -3781,7 +3905,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh17394
+  m_Name: pb_Mesh17392
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
