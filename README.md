@@ -1,14 +1,11 @@
 # cart315-prototype1
 game idea 1
 
-Game about acting in a film as a depressed office worker.
-
 1,2,3:change camera view
+<br>Q,E: toggle lighting
+<br>WASD: move
+<br>Click buttons
 
-WASD: move
+## [wiki](https://github.com/ZiDiZhu/cart315-prototype1/wiki)
 
-Click buttons
-
-Read blue text on screen and ACT as if you are acting. with your voice.
-
-[wiki](https://github.com/ZiDiZhu/cart315-prototype1/wiki)
+## [Design Journal 1](https://github.com/ZiDiZhu/cart315-prototype1/wiki/Design-Journal-1)
