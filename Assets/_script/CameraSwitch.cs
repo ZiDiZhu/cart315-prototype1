@@ -12,7 +12,7 @@ public class CameraSwitch : MonoBehaviour
 
     private void Start()
     {
-        Cam1();
+        Cam2();
     }
     public void Cam1()
     {
