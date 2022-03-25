@@ -17,14 +17,14 @@ public class GetSystemTime : MonoBehaviour
 
     public void UpdateTime()
     {
-        timeDisplay.text = timeNow.ToString("yyyy/MM/dd") + " " + timeNow.DayOfWeek;
+        timeDisplay.text = timeNow.ToString("yyyy/MM/dd");
     }
 
-    public void DateDisplay()
+    public void DateDisplay(int addDay)
     {
         for (int i = 0; i < dates.Length; i++)
         {
-            dates[i].text = timeNow.Year + "/" + timeNow.Month + "/" + (timeNow.Day - i-1);
+            dates[i].text = timeNow.Year + "/" + timeNow.Month + "/" + (timeNow.Day - i-1+addDay);
         }
     }
 }

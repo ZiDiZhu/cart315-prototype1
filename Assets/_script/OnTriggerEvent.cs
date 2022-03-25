@@ -25,4 +25,6 @@ public class OnTriggerEvent : MonoBehaviour
                 exitEvent.Invoke();
         }
     }
+
+    
 }
