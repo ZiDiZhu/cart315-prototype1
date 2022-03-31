@@ -7,6 +7,8 @@ public class CameraSwitch : MonoBehaviour
     public Camera cam2;
     public Camera cam3;
 
+    public Camera currentCam;
+
     public GameObject light1;
     public GameObject light2;
 
@@ -16,6 +18,7 @@ public class CameraSwitch : MonoBehaviour
     }
     public void Cam1()
     {
+        currentCam = cam1;
         cam1.enabled = true;
         cam2.enabled = false;
         cam3.enabled = false;
@@ -23,6 +26,7 @@ public class CameraSwitch : MonoBehaviour
 
     public void Cam2()
     {
+        currentCam = cam2;
         cam1.enabled = false;
         cam2.enabled = true;
         cam3.enabled = false;
@@ -30,6 +34,7 @@ public class CameraSwitch : MonoBehaviour
 
     public void Cam3()
     {
+        currentCam = cam3;
         cam1.enabled = false;
         cam2.enabled = false;
         cam3.enabled = true;
